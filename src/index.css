@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-verse-bg: #0B0F14;
+  --color-verse-blue: #3B82F6;
+  --color-verse-purple: #8B5CF6;
+  --color-verse-pink: #EC4899;
+  
+  --background-image-verse-gradient: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 50%, #EC4899 100%);
+}
+
+@layer base {
+  body {
+    @apply bg-verse-bg text-white font-sans selection:bg-verse-purple/30;
+  }
+}
+
+.verse-gradient-btn {
+  background: var(--background-image-verse-gradient);
+  @apply text-white font-bold py-3 px-6 rounded-xl transition-all hover:opacity-90 active:scale-95 shadow-lg shadow-verse-purple/20 flex items-center justify-center gap-2;
+}
+
+.verse-card {
+  @apply bg-[#161B22] border border-white/5 rounded-2xl p-6 backdrop-blur-sm hover:border-white/10 transition-all;
+}
+
+.verse-text-gradient {
+  background: var(--background-image-verse-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
