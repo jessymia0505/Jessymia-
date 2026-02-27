@@ -14,6 +14,7 @@ import {
   Eye,
   Mail
 } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -246,6 +247,7 @@ export default function App() {
           )}
         </div>
       </section>
+      <Analytics />
     </div>
   );
 }
